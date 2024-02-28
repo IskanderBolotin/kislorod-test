@@ -1,0 +1,23 @@
+.textArea {
+  display: block;
+  width: 100%;
+  border: 1px solid #dadce0;
+  background: #fff;
+  border-radius: 5px;
+  padding: 15px;
+  height: 140px;
+  font-weight: 500;
+  font-size: 14px;
+  color: $color-dark;
+  resize: none;
+  &:focus {
+    border-color: $color-blue;
+    box-shadow: 0 0 4px 0 #{$color-blue};
+  }
+  &.inputText--invalid {
+    border-color: #ea2828;
+  }
+  &::placeholder {
+    color: $color-gray-light;
+  }
+}

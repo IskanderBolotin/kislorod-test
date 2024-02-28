@@ -1,0 +1,22 @@
+mixin starsRadio(name)
+  div.starsRadio
+    input.inputRadio(class="visually-hidden", type="radio", name= name, id= `${name}-1`, value="1")
+    label.starLabel(for= `${name}-1`)
+      svg
+        use(xlink:href="./icons/sprite.svg#star")
+    input.inputRadio(class="visually-hidden", type="radio", name= name, id= `${name}-2`, value="2")
+    label.starLabel(for= `${name}-2`)
+      svg
+        use(xlink:href="./icons/sprite.svg#star")
+    input.inputRadio(class="visually-hidden", type="radio", name= name, id= `${name}-3`, value="3")
+    label.starLabel(for= `${name}-3`)
+      svg
+        use(xlink:href="./icons/sprite.svg#star")
+    input.inputRadio(class="visually-hidden", type="radio", name= name, id= `${name}-4`, value="4")
+    label.starLabel(for= `${name}-4`)
+      svg
+        use(xlink:href="./icons/sprite.svg#star")
+    input.inputRadio(class="visually-hidden", type="radio", name= name, id= `${name}-5`, value="5", checked)
+    label.starLabel(for= `${name}-5`)
+      svg
+        use(xlink:href="./icons/sprite.svg#star")

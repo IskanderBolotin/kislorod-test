@@ -1,0 +1,7 @@
+mixin stars(mark)
+  div.stars
+    - for (var x = 0; x < 5; x++)
+      - var isChecked = mark - 1 >= x
+      div.__item(class=isChecked ? 'stars__item-checked' : '')
+        svg
+          use(xlink:href="./icons/sprite.svg#star")

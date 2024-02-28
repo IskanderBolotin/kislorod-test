@@ -1,0 +1,50 @@
+.starsRadio {
+  display: flex;
+  &:hover {
+    .inputRadio {
+      .starLabel {
+        svg {
+          fill: $color-orange;
+        }
+      }
+      &:checked {
+        & + .starLabel ~ .starLabel {
+          svg {
+            fill: $color-orange;
+          }
+        }
+      }
+      &:hover {
+        .starLabel {
+          svg {
+            fill: $color-orange;
+          }
+        }
+        & + .starLabel ~ .starLabel {
+          svg {
+            fill: $color-light;
+          }
+        }
+      }
+    }
+  }
+}
+.starLabel {
+  cursor: pointer;
+  padding-right: 3px;
+  svg {
+    display: block;
+    width: 18px;
+    height: 18px;
+    fill: $color-orange;
+  }
+}
+.inputRadio {
+  &:checked {
+    & + .starLabel ~ .starLabel {
+      svg {
+        fill: $color-light;
+      }
+    }
+  }
+}

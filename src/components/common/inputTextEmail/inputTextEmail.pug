@@ -1,0 +1,22 @@
+include ../inputLabel/inputLabel
+include ../inputText/inputText
+
+- 
+  var fieldDataEmail = {
+    label: {
+      text: "E-mail",
+      id: "email",
+      isRequired: false
+    },
+    input: {
+      name: "email",
+      id: "email",
+      type: "email",
+      placeholder: "@",
+      isRequired: false
+    }
+  }
+
+mixin inputTextEmail()
+  +inputLabel(fieldDataEmail.label.text, fieldDataEmail.label.id, fieldDataEmail.label.isRequired)
+  +inputText(fieldDataEmail.input.name, fieldDataEmail.input.id, fieldDataEmail.input.type, fieldDataEmail.input.placeholder, fieldDataEmail.input.isRequired)

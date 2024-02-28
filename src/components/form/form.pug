@@ -1,0 +1,27 @@
+include ../common/inputText/inputText
+include ../common/inputTextName/inputTextName
+include ../common/inputTextEmail/inputTextEmail
+include ../common/inputTextTel/inputTextTel
+include ../common/inputTextArea/inputTextArea
+include ../common/inputStars/inputStars
+include ../common/inputFile/inputFile
+include ../common/customButton/customButton
+
+mixin form()
+  div.formBox
+    h2.__title Оставить свой отзыв
+    form.mainForm#reviewForm
+      div.__group
+        +inputTextName()
+      div.__group
+        +inputTextEmail()
+      div.__group
+        +inputTextTel()
+      div.__group
+        +inputStars()
+      div.__group
+        +inputTextArea()
+      div.__group
+        +inputFile()
+      div.__group
+        +customButton("button", "Отправить")(id="reviewBtn")

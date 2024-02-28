@@ -1,0 +1,22 @@
+include ../inputLabel/inputLabel
+include ../inputText/inputText
+
+- 
+  var fieldDataTel = {
+    label: {
+      text: "Контактный телефон",
+      id: "tel",
+      isRequired: false
+    },
+    input: {
+      name: "tel",
+      id: "tel",
+      type: "tel",
+      placeholder: "+7",
+      isRequired: false
+    }
+  }
+
+mixin inputTextTel()
+  +inputLabel(fieldDataTel.label.text, fieldDataTel.label.id, fieldDataTel.label.isRequired)
+  +inputText(fieldDataTel.input.name, fieldDataTel.input.id, fieldDataTel.input.type, fieldDataTel.input.placeholder, fieldDataTel.input.isRequired)

@@ -1,0 +1,22 @@
+include ../inputText/inputText
+include ../inputLabel/inputLabel
+
+- 
+  var fieldDataName = {
+    label: {
+      text: "Как вас зовут?",
+      id: "name",
+      isRequired: true
+    },
+    input: {
+      name: "name",
+      id: "name",
+      type: "text",
+      placeholder: "Иван Иванов",
+      isRequired: true
+    }
+  }
+
+mixin inputTextName()
+  +inputLabel(fieldDataName.label.text, fieldDataName.label.id, fieldDataName.label.isRequired)
+  +inputText(fieldDataName.input.name, fieldDataName.input.id, fieldDataName.input.type, fieldDataName.input.placeholder, fieldDataName.input.isRequired)

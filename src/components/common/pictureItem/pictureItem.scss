@@ -1,0 +1,20 @@
+.image {
+  position: relative;
+  padding-top: 133.33%;
+  &__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #f6f6f6;
+    picture, img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

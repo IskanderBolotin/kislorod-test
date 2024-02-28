@@ -1,0 +1,24 @@
+include ../stars/stars
+include ../answer/answer
+include ../pictureItem/pictureItem
+
+mixin reviewsItem(date, datetime, mark, name, text, photos)
+  - var isHasPhotos = photos.length > 0;
+  div.reviewsItem
+    div.__main
+      time.__date(datetime= datetime)= date
+      div.__mark
+        +stars(mark)
+      div.__name= name
+      p.__text= text
+      if isHasPhotos
+        div.__picture
+          ul.__list
+            each item in photos
+              li.__listItem
+                +pictureItem(item.sources, item.img)
+    div.__answer 
+      div.__arrow
+        svg
+          use(xlink:href="./icons/sprite.svg#answer")
+      +answer("09.09.2023", "2023-09-09", "Здравствуйте! Спасибо за Ваш отзыв! Мы очень рады, что Вы остались довольны сервисом и качеством товаров, представленных в нашем интернет-магазине! Надеемся увидеть Вас в числе наших постоянных клиентов!")

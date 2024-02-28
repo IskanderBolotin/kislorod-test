@@ -1,0 +1,18 @@
+include ../starsRadio/starsRadio
+include ../inputLabel/inputLabel
+
+- 
+  var fieldDataStars = {
+    label: {
+      text: "Как вас зовут?",
+      id: "reviewStars",
+      isRequired: false
+    },
+    input: {
+      name: "review",
+    }
+  }
+
+mixin inputStars()
+  +inputLabel(fieldDataStars.label.text, fieldDataStars.label.id, fieldDataStars.label.isRequired)
+  +starsRadio(fieldDataStars.input.name)

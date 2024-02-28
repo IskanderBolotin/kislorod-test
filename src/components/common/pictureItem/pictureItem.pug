@@ -1,0 +1,7 @@
+mixin pictureItem(sources, img)
+  div.image 
+    div.__inner
+      picture.picture 
+        each item in sources
+          source(srcset=item.srcset, type=item.type)
+        img(src=img.src, srcset=img.srcset, alt=img.alt)

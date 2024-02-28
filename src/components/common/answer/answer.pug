@@ -1,0 +1,6 @@
+mixin answer(date, datetime, text)
+  div.answer
+    time.__date(datetime= datetime)= date
+    div.__title Ответ магазина:
+    p.__text= text 
+    div.__footer С уважением, клиентский сервис интернет-магазина

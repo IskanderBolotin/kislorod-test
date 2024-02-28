@@ -1,0 +1,21 @@
+.formBox {
+  background: #f0f0f0;
+  padding: 30px;
+  border-radius: 10px;
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: $color-dark;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  
+}
+.mainForm {
+  &__group {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}

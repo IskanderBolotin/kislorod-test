@@ -1,0 +1,21 @@
+include ../textArea/textArea
+include ../inputLabel/inputLabel
+
+- 
+  var fieldDataArea = {
+    label: {
+      text: "Комментарий",
+      id: "textArea",
+      isRequired: true
+    },
+    input: {
+      name: "textArea",
+      id: "textArea",
+      placeholder: "Введите текст",
+      isRequired: true
+    }
+  }
+
+mixin inputTextArea()
+  +inputLabel(fieldDataArea.label.text, fieldDataArea.label.id, fieldDataArea.label.isRequired)
+  +textArea(fieldDataArea.input.name, fieldDataArea.input.id, fieldDataArea.input.placeholder, fieldDataArea.input.isRequired)

@@ -1,0 +1,62 @@
+include ../common/reviewsItem/reviewsItem
+include ../form/form
+
+- 
+  var reviwsList = [
+    { 
+      date: "08.09.2023", 
+      datetime: "2023-09-08",
+      mark: 4, 
+      name: "Балашова Татьяна", 
+      text: "Отличное летнее платье с подкладкой, мне очень понравилось, но мне не подошло. покупала на 52 52ой, мало, на 48 или на 50 будет отлично.", 
+      photos: [
+        {
+          sources: [
+            {
+              srcset: "./assets/images/image-1.webp 1x, ./assets/images/image-1@2x.webp 2x",
+              type: "image/webp"
+            }
+          ],
+          img: {
+            src: "./assets/images/image-1.jpg",
+            srcset: "./assets/images/image-1@2x.jpg 2x",
+            alt: "Отзыв 1"
+          }
+        },
+        {
+          sources: [
+            {
+              srcset: "./assets/images/image-2.webp 1x, ./assets/images/image-2@2x.webp 2x",
+              type: "image/webp"
+            }
+          ],
+          img: {
+            src: "./assets/images/image-2.jpg",
+            srcset: "./assets/images/image-2@2x.jpg 2x",
+            alt: "Отзыв 1"
+          }
+        }
+      ]
+    },
+    { 
+      date: "08.09.2023", 
+      datetime: "2023-09-08",
+      mark: 5, 
+      name: "Иванова Елена", 
+      text: "Отличное летнее платье с подкладкой, мне очень понравилось, но мне не подошло. покупала на 52 52ой, мало, на 48 или на 50 будет отлично.", 
+      photos: [] 
+    }
+  ] 
+
+mixin reviews(title, counter)
+  section.section
+    h2.__title
+      | #{title}&nbsp;(#{counter})
+    div.__wrapper
+      div.__main
+        ul.__list 
+          each item in reviwsList
+            li.__item
+              +reviewsItem(item.date, item.datetime, item.mark, item.name, item.text, item.photos)
+      div.__side
+        +form()

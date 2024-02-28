@@ -1,0 +1,12 @@
+.inputLabel {
+  display: block;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: $color-gray;
+  margin-bottom: 6px;
+  &__required {
+    color: #ea2828;
+  }
+}
