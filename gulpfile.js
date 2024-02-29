@@ -136,7 +136,7 @@ const cssBuild = () => {
       gulpIf(
         isBuild,
         rename({
-          extname: ".min.css",
+          extname: ".css",
         })
       )
     )
