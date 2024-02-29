@@ -7,4 +7,22 @@
     padding: 15px 0;
     margin: 0;
   }
+  &__wrapper {
+    @media (min-width: 769px) {
+      display: flex;
+      margin: 0 -15px;
+    }
+  }
+  &__main {
+    @media (min-width: 769px) {
+      padding: 0 15px;
+      width: 66.72%;
+    }
+  }
+  &__side {
+    @media (min-width: 769px) {
+      padding: 0 15px;
+      width: 33.28%;
+    }
+  }
 }

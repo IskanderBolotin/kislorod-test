@@ -147,4 +147,8 @@ a {
 .container {
   width: 100%;
   padding: 0 16px;
+  margin: 0 auto;
+  @media (min-width: 769px) {
+    max-width: 1472px;
+  }
 }

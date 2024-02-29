@@ -1,6 +1,6 @@
 mixin inputFile()
   div.fileWrapper#file-wrapper
-    input.visually-hidden(type="file", name="file", id="file", multiple, accept="image/*")
+    input.visually-hidden(type="file", name="file", id="file", multiple, accept="image/jpeg, image/png")
     label.inputFile(for="file", id="file-label-main")
       span.__icon
         svg
@@ -8,15 +8,3 @@ mixin inputFile()
       span.__text 
         | Загрузить фотографии. Максимальный вес 10 мегабайт. <br />
         | Расширение jpeg, png
-    //- ul.filesList#file-list
-    //-   li.__item 
-    //-     label.inputFileMin(for="file") 
-    //-       span.inputFile__icon
-    //-         svg
-    //-           use(xlink:href="./icons/sprite.svg#load-file")
-    //-   li.__item 
-    //-     div.__image
-    //-       img(src="", alt="loaded")
-    //-       div.__close
-    //-         svg
-    //-           use(xlink:href="./icons/sprite.svg#close")
