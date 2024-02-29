@@ -1,5 +1,5 @@
 mixin inputLabel(text, id, isRequired)
-  label.inputLabel(type= type, name= name, for= id, placeholder= placeholder, required= isRequired)&attributes(attributes)
+  label.inputLabel(type= type, name= name, for= id, placeholder= placeholder)&attributes(attributes)
     if isRequired
       | #{text}&nbsp;#[span.__required *]
     else
